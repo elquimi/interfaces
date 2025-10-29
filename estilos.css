@@ -1,0 +1,47 @@
+body {
+  
+    background-color: #005085;
+}
+
+#titulo {
+    color: white;
+    text-align: center;
+   
+}
+
+#primer_div {
+    background-color: #e6e6e6;
+    width: 40%;
+    height:100%;
+    
+    
+   
+    
+}
+
+
+
+#div_padre{
+    align-items: left;
+}
+
+
+.div_titulo{
+    text-align: center;
+    color: white;
+    background-color: #213746;
+    
+}
+
+#div_titulo_primero{
+    width: 100%;
+    
+    padding: 10px;
+
+}
+#div_menu_primero{
+    display: flex;
+    justify-content: space-around;
+   
+
+}
