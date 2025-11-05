@@ -1,5 +1,5 @@
 body {
-    background-color: #005085;
+    
     font-family: Arial, Helvetica, sans-serif; 
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@ body {
 
 
 #contenedor_principal {
-    background-color: #e6e6e6;
+    background-color: #bdbcbc;
     width: 100%;
     
     
@@ -73,4 +73,88 @@ body {
     height: 100%;
     background-color: #b9b9b9;
    
+}
+
+
+
+.contenedor_padre_tarjetas{
+    position: relative;
+   background-color: #bdbcbc;
+   height: 150px;
+}
+.tarjeta{
+   position: absolute;
+    
+    width: 100px; 
+    height: 100px;  
+    padding: 5px;
+    
+   
+    background-color: #007bff; 
+    color: white;
+    border-radius: 5px;
+    
+    
+   
+}
+
+#minititulo_tarjetas{
+   
+
+    position: absolute;
+      
+    left: 800px; 
+    margin: 0; 
+
+   
+}
+
+#tarjeta1 {
+   left: 20px;
+}
+
+#tarjeta2 {
+    left: 150px;
+}
+
+#tarjeta3 {
+   left: 280px
+}
+
+
+
+
+
+
+
+
+
+#seccion_sticky {
+   
+    background-color: #bdbcbc;
+    width: 99%;                
+    margin: 30px auto;        
+    position: relative;       
+}
+
+/* EL ENCABEZADO QUE SE PEGA */
+#div_titulo_sticky {
+    background-color: rgb(86, 184, 86);
+    color: white;
+    text-align: center;
+    padding: 1px;
+    
+    /* ESTO HACE LA MAGIA */
+    position: sticky;
+    top: 0; /* Se pega justo al llegar al borde superior (0px) */
+    z-index: 10; /* Se asegura de estar por encima del texto que pasa por debajo */
+}
+
+
+
+/* Estilo simple para el relleno */
+.contenido_relleno {
+    padding: 20px;
+    color: #333;
+    line-height: 1.6;
 }
