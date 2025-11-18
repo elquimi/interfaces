@@ -1,0 +1,185 @@
+/* RESET BÁSICO (Obligatorio en examen) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Vital para que el padding no rompa el ancho */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* CLASE DE UTILIDAD PARA CENTRAR Y LIMITAR ANCHO */
+.container {
+    max-width: 1100px;
+    margin: 0 auto; /* Centra el bloque horizontalmente */
+    padding: 0 20px;
+}
+
+/* --- HEADER (STICKY) --- */
+.main-header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 1rem 0;
+    /* LA CLAVE DEL STICKY: */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Asegura que quede por encima del resto */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Logo a la izq, Menú a la der */
+    align-items: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* --- SECCIONES GENERALES --- */
+section {
+    padding: 3rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+h2, h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+/* --- HERO --- */
+.hero {
+    text-align: center;
+    background-color: #fff;
+    padding: 4rem 0;
+}
+
+/* --- GALERÍA (FLEXBOX) --- */
+/* Replicando los 4 cuadrados en línea */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que bajen si no caben */
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    /* Flex: grow shrink basis. 
+       Basis 200px asegura que tengan un ancho base, 
+       Grow 1 hace que llenen el hueco. */
+    flex: 1 1 200px; 
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card-img {
+    height: 150px;
+    background-color: #bdc3c7; /* Gris simulando imagen */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+/* --- SERVICIOS (GRID 2x2) --- */
+/* Replicando el cuadro a/b c/d de la pizarra */
+.services-grid {
+    display: grid;
+    /* Dos columnas de igual tamaño (1 fracción cada una) */
+    grid-template-columns: 1fr 1fr; 
+    /* Dos filas de altura automática (o fija si quieres) */
+    grid-template-rows: auto auto; 
+    gap: 15px;
+}
+
+.service-item {
+    background-color: #3498db;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Para darle colores distintos como en un mockup */
+.item-a { background-color: #3498db; }
+.item-b { background-color: #2980b9; }
+.item-c { background-color: #1abc9c; }
+.item-d { background-color: #16a085; }
+
+/* --- ELEMENTO FLOTANTE (FIXED) --- */
+.floating-btn {
+    position: fixed; /* Se queda fijo respecto a la VENTANA */
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1); /* Pequeño efecto zoom al pasar ratón */
+}
+
+/* --- FOOTER (FLEXBOX) --- */
+.main-footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 2rem 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Columna izq y der separadas */
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col a {
+    color: #bdc3c7;
+    text-decoration: none;
+}
+
+/* --- RESPONSIVE (BONUS PROFESIONAL) --- */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* 1 sola columna en móvil */
+    }
+    .footer-content {
+        flex-direction: column; /* Footer vertical en móvil */
+        gap: 20px;
+        text-align: center;
+    }
+}

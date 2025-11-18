@@ -1,0 +1,115 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; 
+}
+
+
+.seccion {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff; 
+    border-bottom: 1px solid #ddd;
+}
+
+.seccion h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+#inicio {
+    
+    height: 100vh; 
+    
+
+    background-image: url('cerebro.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    color: white; 
+    border-bottom: none; 
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-hero h1 {
+    font-size: 4em;
+    margin: 0;
+}
+.contenido-hero p {
+    font-size: 1.5em;
+}
+.boton {
+    display: inline-block;
+    background-color: #3498db; 
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.contenedor-flex {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+.card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    
+
+    flex-basis: 300px; 
+    padding: 20px;
+}
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.img-galeria {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.col-especs {
+    flex-basis: 200px;
+    text-align: left;
+}
+.footer {
+    background-color: #0f08e7; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

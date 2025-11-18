@@ -9,6 +9,7 @@ body {
 #contenedor_principal {
     background-color: #bdbcbc;
     width: 100%;
+    margin: 0;
     
     
     
@@ -20,6 +21,9 @@ body {
     text-align: center;
     color: white;
     background-color: #213746;
+    position: sticky;
+    top: 0; 
+    z-index: 10; 
 }
 
 
@@ -137,24 +141,55 @@ body {
     position: relative;       
 }
 
-/* EL ENCABEZADO QUE SE PEGA */
+
 #div_titulo_sticky {
-    background-color: rgb(86, 184, 86);
-    color: white;
-    text-align: center;
-    padding: 1px;
-    
-    /* ESTO HACE LA MAGIA */
-    position: sticky;
-    top: 0; /* Se pega justo al llegar al borde superior (0px) */
-    z-index: 10; /* Se asegura de estar por encima del texto que pasa por debajo */
+  position: sticky;
+  top: 130px; /* se pega 60px por debajo del sticky de arriba */
+  background-color: rgb(86, 184, 86);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  z-index: 5;
 }
 
 
 
-/* Estilo simple para el relleno */
+
 .contenido_relleno {
     padding: 20px;
     color: #333;
     line-height: 1.6;
+}
+.articulo_principal{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+     background-color: #bdbcbc;
+    width: 99%;                
+    margin: 30px auto;        
+    position: relative;   
+   box-shadow: 2px 2px 5px #555;
+}
+.hover{
+    position: relative;
+    margin-bottom: 3px;
+}
+
+#boton_hover{
+    background-color: red;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    color: wheat;
+    
+}
+.linea{
+    margin-top: 50px;
+    border-top: 2px solid black;
+   
+    border-radius: 2px;
+     background-color: #bdbcbc;
+     height: 50px;
+     width: 100%;
+    
 }
