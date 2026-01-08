@@ -1,0 +1,325 @@
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    /* Degradado sutil similar a la imagen (un poco rosado/azulado abajo) */
+    background: linear-gradient(180deg, #F7F9FC 0%, #F5F0FF 100%);
+    color: #1F2937;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 60px;
+    /* Sombra muy suave en vez de borde duro */
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.brand {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111;
+    margin-right: 30px;
+}
+
+.menu a {
+    margin-left: 24px;
+    color: #6B7280;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.menu a:hover {
+    color: #7C3AED;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    color: #6B7280;
+    cursor: pointer;
+}
+
+.username {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.user-pic {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 0 60px;
+}
+
+.hero-box {
+    width: 100%;
+    max-width: 1200px;
+    height: 320px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    
+    /* Fondo Morado con imagen mezclada */
+    background: 
+        linear-gradient(90deg, rgba(85, 30, 160, 0.85) 0%, rgba(124, 58, 237, 0.8) 100%),
+        url('cabecera.jpeg'); /* Asegúrate de que cabecera.jpeg existe */
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    max-width: 700px;
+    padding: 0 20px;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.hero-content h2 {
+    margin: 0 0 30px 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.pill-badge {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pill-badge span {
+    font-weight: bold;
+}
+
+/* TITLE */
+.choose-title {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.choose-title h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #111;
+}
+
+.choose-title p {
+    color: #6B7280;
+    margin-top: 8px;
+    font-size: 0.95rem;
+}
+
+/* GRID */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    padding: 0 60px;
+    margin: 0 auto 80px auto;
+    gap: 30px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    border-radius: 16px;
+    /* Sombra muy suave */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #F3F4F6;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-container {
+    width: 100%;
+    height: 220px;
+    background: #f0f0f0;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111;
+}
+
+.card-desc {
+    margin: 8px 0 24px;
+    color: #6B7280;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.mode-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: auto; /* Empuja los botones al final */
+}
+
+.mode {
+    flex: 1;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
+.mode.light {
+    background: #F9FAFB;
+    color: #374151;
+    border: 1px solid #E5E7EB;
+}
+.mode.light:hover {
+    background: #F3F4F6;
+}
+
+.mode.dark {
+    background: #050505; /* Casi negro */
+    color: white;
+    border: 1px solid #050505;
+}
+.mode.dark:hover {
+    background: #1f1f1f;
+}
+
+/* BOTÓN FLOTANTE (FAB) */
+.fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    background-color: #050505;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+    z-index: 100;
+    transition: transform 0.2s;
+}
+
+.fab:hover {
+    transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 16px 20px;
+    }
+    .menu {
+        display: none; /* Menú hamburguesa sería necesario aquí */
+    }
+    .game-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    .hero {
+        padding: 0 20px;
+    }
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+    .hero-box {
+        height: auto;
+        padding: 40px 0;
+    }
+}

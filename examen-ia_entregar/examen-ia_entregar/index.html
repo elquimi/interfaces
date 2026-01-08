@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos de Mesa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-left">
+            <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 11C21 16.523 16.523 21 11 21C5.477 21 1 16.523 1 11C1 5.477 5.477 1 11 1C16.523 1 21 5.477 21 11Z" stroke="#7C3AED" stroke-width="2"/>
+                <path d="M7 11H15M11 7V15" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="17" cy="9" r="1" fill="#7C3AED"/>
+                <circle cx="19" cy="11" r="1" fill="#7C3AED"/>
+            </svg>
+            <span class="brand">Juegos de Mesa</span>
+
+            <nav class="menu">
+                <a href="#">Tres en Raya</a>
+                <a href="#">Damas</a>
+                <a href="#">Parchís</a>
+                <a href="#">Juego de la Oca</a>
+            </nav>
+        </div>
+
+        <div class="nav-right">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span class="username">Luis Álvarez Navarro</span>
+            <img src="userShadow.svg" class="user-pic" alt="User"> </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-box">
+            <div class="hero-overlay"></div>
+            
+            <div class="hero-content">
+                <p class="hero-subtitle">Bienvenido a Juegos de Mesa Online</p>
+                <h2>
+                    Disfruta de los clásicos juegos de mesa con tus amigos y familia. Juega en modo local
+                    o conéctate online para partidas en tiempo real.
+                </h2>
+
+                <div class="hero-buttons">
+                    <div class="pill-badge">
+                        <span>✓</span> 4 Juegos Clásicos
+                    </div>
+                    <div class="pill-badge">
+                        <span>✓</span> Modo Local y Online
+                    </div>
+                    <div class="pill-badge">
+                        <span>✓</span> Asistente Inteligente
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="choose-title">
+        <h3>Elige tu Juego</h3>
+        <p>Selecciona un juego y el modo de juego para empezar</p>
+    </section>
+
+    <section class="game-grid">
+
+        <article class="card">
+            <div class="card-img-container">
+                <img src="3enRaya.jpeg" class="card-img" alt="Tres en Raya">
+            </div>
+            <div class="card-body">
+                <h4>Tres en Raya</h4>
+                <p class="card-desc">El clásico juego de estrategia para dos jugadores</p>
+
+                <div class="mode-buttons">
+                    <button class="mode light">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        Local
+                    </button>
+                    <button class="mode dark">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        Online
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-img-container">
+                <img src="damas.jpeg" class="card-img" alt="Damas">
+            </div>
+            <div class="card-body">
+                <h4>Damas</h4>
+                <p class="card-desc">Juego de mesa estratégico para dos jugadores</p>
+
+                <div class="mode-buttons">
+                    <button class="mode light">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        Local
+                    </button>
+                    <button class="mode dark">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        Online
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-img-container">
+                <img src="parchis.png" class="card-img" alt="Parchís">
+            </div>
+            <div class="card-body">
+                <h4>Parchís</h4>
+                <p class="card-desc">Juego de carreras para 2–4 jugadores</p>
+
+                <div class="mode-buttons">
+                    <button class="mode light">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        Local
+                    </button>
+                    <button class="mode dark">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        Online
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-img-container">
+                <img src="juegoOca.png" class="card-img" alt="Juego de la Oca">
+            </div>
+            <div class="card-body">
+                <h4>Juego de la Oca</h4>
+                <p class="card-desc">Clásico juego de mesa con dados</p>
+
+                <div class="mode-buttons">
+                    <button class="mode light">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        Local
+                    </button>
+                    <button class="mode dark">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        Online
+                    </button>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    <div class="fab">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    </div>
+
+</body>
+</html>

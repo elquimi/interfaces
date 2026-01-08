@@ -1,0 +1,196 @@
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: linear-gradient(180deg, #eef4ff 0%, #f6f1ff 100%);
+    color: #222;
+}
+
+/* NAVBAR */
+.navbar {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 32px;
+}
+
+.brand {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.menu a {
+    margin-left: 24px;
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+}
+.menu a:hover {
+    color: #000;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.nav-icon {
+    width: 24px;
+}
+
+.username {
+    font-size: 0.9rem;
+}
+
+.user-pic {
+    width: 38px;
+    border-radius: 50%;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.hero-box {
+    width: 70%;
+    height: 280px;
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(35%);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.white-btn {
+    background: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 40px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.white-btn .icon {
+    width: 18px;
+}
+
+/* TITLE */
+.choose-title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.choose-title p {
+    color: #666;
+    margin-top: 4px;
+}
+
+/* GRID */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    margin: 40px auto;
+    gap: 30px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h4 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.card-body p {
+    margin: 6px 0 20px;
+    color: #666;
+}
+
+.mode-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mode {
+    border: none;
+    padding: 9px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.mode.light {
+    background: #f0f0f7;
+}
+
+.mode.dark {
+    background: #0a0a18;
+    color: white;
+}

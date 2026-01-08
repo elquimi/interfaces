@@ -1,0 +1,216 @@
+Esta información es oro. Viendo tu pizarra (IMG_1249.jpg) y lo que me cuentas, el profesor va a pedir una Landing Page completa (One Page).
+
+El dibujo de la pizarra muestra claramente:
+
+Galería: 4 elementos en línea.
+
+Servicios: Una cuadrícula 2x2 (a, b, c, d).
+
+Footer: Dos columnas de texto.
+
+"Elemento flotante": Puede ser un botón de "Subir", un chat, o un menú que se queda pegado (sticky).
+
+Aquí tienes una "Guía de Supervivencia" con los ejercicios exactos que necesitas llevar preparados mentalmente o impresos (si te dejan apuntes) para copiar y pegar, enfocados en HTML Semántico (Anti-Divitis) y la estructura de la pizarra.
+
+1. El Esqueleto Semántico (OBLIGATORIO)
+El profesor ha dicho "profesional" y "evitar exceso de divs". No uses <div id="header">. Usa esto:
+
+HTML
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen DAW</title>
+    <style>
+        /* RESET BÁSICO - IMPRESCINDIBLE PARA EL EXAMEN */
+        * {
+            box-sizing: border-box; /* Evita que el padding deforme las cajas */
+            margin: 0;
+            padding: 0;
+        }
+        body { font-family: sans-serif; line-height: 1.6; }
+        img { max-width: 100%; display: block; } /* Imágenes responsive */
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>Título Principal</h1>
+        <nav>
+            <ul>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="galeria" class="seccion-galeria">
+            <h2>Galería</h2>
+            <div class="contenedor-flex">
+                <article class="card">Item 1</article>
+                <article class="card">Item 2</article>
+                <article class="card">Item 3</article>
+                <article class="card">Item 4</article>
+            </div>
+        </section>
+
+        <section id="servicios" class="seccion-servicios">
+            <h2>Servicios</h2>
+            <div class="grid-2x2">
+                <article class="servicio-item">A</article>
+                <article class="servicio-item">B</article>
+                <article class="servicio-item">C</article>
+                <article class="servicio-item">D</article>
+            </div>
+        </section>
+    </main>
+
+    <a href="#" class="btn-flotante">↑</a>
+
+    <footer class="main-footer">
+        <div class="columna">
+            <h3>Contacto</h3>
+            <p>Calle Falsa 123</p>
+        </div>
+        <div class="columna">
+            <h3>Redes</h3>
+            <p>Instagram / Facebook</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+2. CSS para la "Galería" (Los 4 cuadros en línea)
+En la pizarra se ven 4 cuadrados. Seguramente querrá que se adapten.
+
+CSS
+
+.seccion-galeria {
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+.contenedor-flex {
+    display: flex;
+    flex-wrap: wrap; /* Importante: si no caben, bajan */
+    justify-content: space-between; /* Espacio entre ellos */
+    gap: 20px; /* Hueco entre cajas */
+}
+
+.card {
+    flex: 1; /* Crecen para ocupar espacio */
+    min-width: 200px; /* No se hacen más pequeños de 200px */
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    /* Sombra suave para toque profesional */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+3. CSS para "Servicios" (El Grid 2x2 de la pizarra)
+En la pizarra dibujó una caja con a b / c d. Esto es una trampa clásica. Se puede hacer con Flexbox (con wrap) o Grid. Usa Flexbox si te sientes más seguro, pero Grid es menos código.
+
+Opción A: Flexbox (Más control manual)
+
+CSS
+
+.grid-2x2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.servicio-item {
+    /* 50% del ancho menos la mitad del hueco (gap) */
+    width: calc(50% - 5px); 
+    height: 100px;
+    background-color: #3498db;
+    color: white;
+    display: flex;           /* Para centrar el texto A, B, C... */
+    justify-content: center;
+    align-items: center;
+}
+Opción B: Grid (Más profesional y rápido)
+
+CSS
+
+.grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 10px;
+}
+.servicio-item {
+    background-color: #3498db;
+    padding: 2rem;
+    color: white;
+}
+4. El Elemento Flotante (Sticky vs Fixed)
+El profesor mencionó explícitamente esto. Hay dos posibilidades:
+
+Caso A: Barra de menú que se pega al bajar (Sticky) Esto suele usarse en la cabecera.
+
+CSS
+
+.main-header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    /* La magia: */
+    position: sticky;
+    top: 0; 
+    z-index: 1000; /* Para que esté por encima de todo */
+}
+Caso B: Botón flotante en una esquina (Fixed) Como un botón de WhatsApp o "Volver arriba".
+
+CSS
+
+.btn-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e74c3c;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Círculo perfecto */
+    text-align: center;
+    line-height: 50px; /* Centra verticalmente el texto si es una sola línea */
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+5. El Footer (Columnas)
+En la pizarra se ven dos listas de rayas abajo.
+
+CSS
+
+.main-footer {
+    display: flex;
+    justify-content: space-around; /* Separa las columnas */
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+Estrategia para los 10 minutos con IA
+Cuando termines el examen manual y tengas los 10 minutos con la IA, no intentes pedirle "hazme el examen entero". Falla mucho en maquetación precisa de imagen a código en un solo paso.
+
+Usa este Prompt Maestro (guárdalo o memorízalo):
+
+"Actúa como un desarrollador web experto. Genera el código HTML5 semántico y CSS3 para una Landing Page profesional.
+
+Requisitos:
+
+Estructura: Header (sticky), Section Galería (4 items flex), Section Servicios (Grid 2x2), Footer (2 columnas).
+
+Estilos: Usa Flexbox y Grid. Diseño limpio, colores suaves, sombras en las tarjetas.
+
+Elemento flotante: Un botón fijo en la esquina inferior derecha.
+
+IMPORTANTE: No uses exceso de DIVs, usa etiquetas semánticas (header, nav, section, article, footer).
+
+Hazlo responsive."
+
+Consejo final: Si en la pizarra aparece 1.jpg, 2.png, asegúrate de que las rutas de las imágenes en tu código sean relativas y correctas (ej: <img src="img/1.jpg"> o simplemente <img src="1.jpg"> si están en la misma carpeta). Un fallo en la ruta de la imagen es un fallo "tonto" que baja puntos.
